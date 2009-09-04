@@ -1,0 +1,62 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBible Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bibles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBible Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bibles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBible Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bibles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBible Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bibles`[0m
+  [4;36;1mBible Load (0.0ms)[0m   [0;1mSELECT * FROM `bibles` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBible Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bibles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBible Create (69.0ms)[0m   [0mINSERT INTO `bibles` (`name`, `id`, `publisher`) VALUES('NASB', 1, 'Lockman Foundation')[0m
+  [4;36;1mSQL (159.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mBible Create (56.0ms)[0m   [0;1mINSERT INTO `bibles` (`name`, `id`, `publisher`) VALUES('NIV', 2, 'Zondervan')[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBible Load (0.0ms)[0m   [0;1mSELECT * FROM `bibles` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBible Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `bibles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBible Create (0.0ms)[0m   [0mINSERT INTO `bibles` (`name`, `id`, `publisher`) VALUES('NASB', 1, 'Lockman Foundation')[0m
+  [4;36;1mSQL (70.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mBible Create (40.0ms)[0m   [0;1mINSERT INTO `bibles` (`name`, `id`, `publisher`) VALUES('NIV', 2, 'Zondervan')[0m
+  [4;35;1mSQL (115.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBible Load (1.0ms)[0m   [0;1mSELECT * FROM `bibles` [0m
+  [4;35;1mBible Delete all (44.0ms)[0m   [0mDELETE FROM `bibles` WHERE (`id` IN (1)) [0m
+  [4;36;1mBible Delete all (22.0ms)[0m   [0;1mDELETE FROM `bibles` WHERE (`id` IN (2)) [0m
+  [4;35;1mBible Load (1.0ms)[0m   [0mSELECT * FROM `bibles` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mBible Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bibles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBible Create (0.0ms)[0m   [0mINSERT INTO `bibles` (`name`, `id`, `publisher`) VALUES('NASB', 1, 'Lockman Foundation')[0m
+  [4;36;1mSQL (24.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mBible Create (0.0ms)[0m   [0;1mINSERT INTO `bibles` (`name`, `id`, `publisher`) VALUES('NIV', 2, 'Zondervan')[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBible Load (1.0ms)[0m   [0;1mSELECT * FROM `bibles` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m

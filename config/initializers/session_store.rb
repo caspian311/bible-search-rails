@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
   :key         => '_bible-search_session',
-  :secret      => 'ef79283cf5a323bf5ecb77f2874f13c209e6b11aeeea332f50c26eb51e357cb48bebfa1026b599bb80cd7b62f9d7bcc4c6664102e73f4e68de4dcfb807f9a5e4'
+  :secret      => 'fa6b21471ff274c38f65734fbacb6d7efbe2a2d9ec30d5bbf6514e79f7a1373f88a7917169186e88c0251d15285bf3c4e6118bf6225632fdcf894b881159444e'
 }
 
 # Use the database for sessions instead of the cookie-based default,
