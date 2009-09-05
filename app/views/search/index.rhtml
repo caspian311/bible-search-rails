@@ -1,12 +1,14 @@
 <html>
   <head>
-    <title>Bible Search</title>
+    <title>Search Results</title>
   </head>
   <body>
-    <h1>Bible Search</h1>
-    <form action="/search/results">
-      <input type="text" name="query" />
-      <input type="submit" name="Search" />
-    </form>
+    <h1>Search Results</h1>
+    for query: <%= @query %>
+    <ul>
+    <% @results.each do |result| %>
+    <li><%= result %></li>
+    <% end %>
+    </ul>
   </body>
 </html>
