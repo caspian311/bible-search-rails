@@ -9,11 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090904142308) do
+ActiveRecord::Schema.define(:version => 1) do
 
   create_table "bibles", :force => true do |t|
     t.string "name"
     t.string "publisher"
+  end
+
+  create_table "books", :force => true do |t|
+    t.string  "title"
+    t.integer "bible_id"
+  end
+
+  create_table "chapters", :force => true do |t|
+    t.integer "book_id"
+  end
+
+  create_table "verses", :force => true do |t|
+    t.string  "text"
+    t.integer "chapter_id"
   end
 
 end

@@ -1,23 +1,71 @@
 class BibleTest<Test::Unit::TestCase
-  def test_find_all
-    b = Bible.new
-    b.id = 1
-    b.name = "NASB"
-    b.publisher = "Lockman Foundation"
-    b.save
+  def setup
+    Bible.destroy_all
+    Book.destroy_all
+    Chapter.destroy_all
+    Verse.destroy_all
+  end
 
-    b2 = Bible.new
-    b2.id = 2
-    b2.name = "NIV"
-    b2.publisher = "Zondervan"
-    b2.save
+  def teardown
+    Bible.destroy_all
+    Book.destroy_all
+    Chapter.destroy_all
+    Verse.destroy_all
+  end
+
+  def test_find_all
+    nasBible = Bible.new
+    nasBible.id = 1
+    nasBible.name = "NASB"
+    nasBible.publisher = "Lockman Foundation"
+    nasBible.save
+
+    nivBible = Bible.new
+    nivBible.id = 2
+    nivBible.name = "NIV"
+    nivBible.publisher = "Zondervan"
+    nivBible.save
 
     assert_equal(2, Bible.all.size)
 
-    all_bibles.each do |bible|
+    Bible.all.each do |bible|
       bible.delete
     end
 
     assert_equal(0, Bible.all.size)
+  end
+
+  def test_relationships
+    bible = Bible.new
+    bible.name = "NASB"
+    bible.publisher = "Lockman Foundation"
+
+    genesis = Book.new
+    genesis.title = "Genesis"
+
+    bible.books << genesis
+
+    chap1 = Chapter.new
+
+    genesis.chapters << chap1
+
+    verse1 = Verse.new
+    verse1.text = "In the beginning..."
+
+    chap1.verses << verse1
+
+    bible.save
+
+    assert_equal(1, Bible.all.size)
+    assert_equal(1, Book.all.size)
+    assert_equal(1, Chapter.all.size)
+    assert_equal(1, Verse.all.size)
+
+    bible.destroy
+
+    assert_equal(0, Bible.all.size)
+    assert_equal(0, Book.all.size)
+    assert_equal(0, Chapter.all.size)
+    assert_equal(0, Verse.all.size)
   end
 end
