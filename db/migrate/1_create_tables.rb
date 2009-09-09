@@ -22,6 +22,7 @@ class CreateTables < ActiveRecord::Migration
   end
 
   def self.down
+    drop_table :verses
     drop_table :chapters
     drop_table :books
     drop_table :bibles
