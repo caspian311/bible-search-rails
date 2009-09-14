@@ -9,12 +9,22 @@
       <input type="submit" name="Search" />
     </form>
     <hr />
-    <h1>Search Results</h1>
-    for query: <%= @query %>
-    <ul>
-      <% @results.each do |result| %>
-        <li><%= result %></li>
-      <% end %>
-    </ul>
+    <h1>Results for query: <%= @query %></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Bible</th>
+          <th>Reference</th>
+          <th>Text</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @results.each do |result| %>
+          <tr>
+            <td><%= result %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </body>
 </html>

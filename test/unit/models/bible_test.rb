@@ -1,29 +1,23 @@
 class BibleTest<Test::Unit::TestCase
   def setup
     Bible.destroy_all
-    Book.destroy_all
-    Chapter.destroy_all
-    Verse.destroy_all
   end
 
   def teardown
     Bible.destroy_all
-    Book.destroy_all
-    Chapter.destroy_all
-    Verse.destroy_all
   end
 
   def test_find_all
     nasBible = Bible.new
     nasBible.id = 1
-    nasBible.name = "NASB"
-    nasBible.publisher = "Lockman Foundation"
+    nasBible.shortName = "NASB"
+    nasBible.longName = "Lockman Foundation"
     nasBible.save
 
     nivBible = Bible.new
     nivBible.id = 2
-    nivBible.name = "NIV"
-    nivBible.publisher = "Zondervan"
+    nivBible.shortName = "NIV"
+    nivBible.longName = "Zondervan"
     nivBible.save
 
     assert_equal(2, Bible.all.size)
@@ -37,8 +31,8 @@ class BibleTest<Test::Unit::TestCase
 
   def test_relationships
     bible = Bible.new
-    bible.name = "NASB"
-    bible.publisher = "Lockman Foundation"
+    bible.shortName = "NASB"
+    bible.longName = "Lockman Foundation"
 
     genesis = Book.new
     genesis.title = "Genesis"
