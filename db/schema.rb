@@ -12,7 +12,8 @@
 ActiveRecord::Schema.define(:version => 1) do
 
   create_table "bibles", :force => true do |t|
-    t.string "name"
+    t.string "longName"
+    t.string "shortName"
     t.string "publisher"
   end
 
@@ -22,10 +23,12 @@ ActiveRecord::Schema.define(:version => 1) do
   end
 
   create_table "chapters", :force => true do |t|
+    t.integer "reference"
     t.integer "book_id"
   end
 
   create_table "verses", :force => true do |t|
+    t.integer "reference"
     t.string  "text"
     t.integer "chapter_id"
   end

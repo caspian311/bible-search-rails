@@ -8,5 +8,13 @@
       <input type="text" name="query" />
       <input type="submit" name="Search" />
     </form>
+    <hr />
+    <h1>Search Results</h1>
+    for query: <%= @query %>
+    <ul>
+      <% @results.each do |result| %>
+        <li><%= result %></li>
+      <% end %>
+    </ul>
   </body>
 </html>
