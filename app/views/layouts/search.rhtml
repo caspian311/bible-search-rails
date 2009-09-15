@@ -9,19 +9,21 @@
       <input type="submit" name="Search" />
     </form>
     <hr />
-    <h1>Results for query: <%= @query %></h1>
+    <h1><%= @results.size %> result(s) for query: <%= @query %></h1>
     <table>
       <thead>
         <tr>
-          <th>Bible</th>
-          <th>Reference</th>
-          <th>Text</th>
+          <th align="left">Bible</th>
+          <th align="left">Reference</th>
+          <th align="left">Text</th>
         </tr>
       </thead>
       <tbody>
         <% @results.each do |result| %>
           <tr>
-            <td><%= result %></td>
+            <td><%= result.chapter.book.bible.shortName %></td>
+            <td><%= result.chapter.book.title %> <%= result.chapter.reference %>:<%= result.reference %></td>
+            <td><%= result.text %></td>
           </tr>
         <% end %>
       </tbody>
