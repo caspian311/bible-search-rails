@@ -8,25 +8,27 @@
       <input type="text" name="query" />
       <input type="submit" name="Search" />
     </form>
-    <hr />
-    <h1><%= @results.size %> result(s) for query: <%= @query %></h1>
-    <table>
-      <thead>
-        <tr>
-          <th align="left">Bible</th>
-          <th align="left">Reference</th>
-          <th align="left">Text</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @results.each do |result| %>
+    <% if @results != nil %>
+      <hr />
+      <h1><%= @results.size %> result(s) for query: <%= @query %></h1>
+      <table>
+        <thead>
           <tr>
-            <td><%= result.chapter.book.bible.shortName %></td>
-            <td><%= result.chapter.book.title %> <%= result.chapter.reference %>:<%= result.reference %></td>
-            <td><%= result.text %></td>
+            <th align="left">Bible</th>
+            <th align="left">Reference</th>
+            <th align="left">Text</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @results.each do |result| %>
+            <tr>
+              <td><%= result.chapter.book.bible.shortName %></td>
+              <td><%= result.chapter.book.title %> <%= result.chapter.reference %>:<%= result.reference %></td>
+              <td><%= result.text %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
   </body>
 </html>

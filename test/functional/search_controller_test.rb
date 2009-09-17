@@ -1,12 +1,19 @@
 require 'test_helper'
 
 class SearchControllerTest < ActionController::TestCase
-  def test_get
+  def test_if_no_query_is_given_results_are_not_populated
     get :index
-    assert_response :success
+
+    assert_nil assigns(:results)
   end
 
-  def test_query
+   def test_if_empty_query_is_given_results_are_not_populated
+    get :index, {:query => ""}
+
+    assert_nil assigns(:results)
+  end
+
+  def test_if_query_is_given_relavent_results_are_populated
     get :index, {:query => "God"}
 
     assert_not_nil assigns(:results)
